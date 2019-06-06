@@ -1,0 +1,51 @@
+{
+  "name": "hacker-news-react-clone",
+  "version": "0.0.0",
+  "description": "A web application that is similar to a version hacker news web app",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "NODE_ENV='production' webpack",
+    "build:local": "NODE_ENV='development' webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionware/hacker-news-react-clone.git"
+  },
+  "keywords": [
+    "hackernews",
+    "news",
+    "react",
+    "react",
+    "router",
+    "api"
+  ],
+  "author": "Adedeji Stephen <ionwarez@gmail.com> (https://github.com/ionware)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionware/hacker-news-react-clone/issues"
+  },
+  "homepage": "https://github.com/ionware/hacker-news-react-clone#readme",
+  "dependencies": {
+    "prop-types": "15.7.2",
+    "query-string": "6.6.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/preset-env": "7.4.5",
+    "@babel/preset-react": "7.0.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
+    "copy-webpack-plugin": "5.0.3",
+    "css-loader": "2.1.1",
+    "html-webpack-plugin": "3.2.0",
+    "style-loader": "0.23.1",
+    "webpack": "4.33.0",
+    "webpack-cli": "3.3.2",
+    "webpack-dev-server": "3.6.0"
+  }
+}
