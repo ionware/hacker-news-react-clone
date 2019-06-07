@@ -22,5 +22,8 @@ module.exports = {
             { from: './app/icon.png'}
         ])
     ],
-    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development'
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+    devServer: {
+        historyApiFallback: true,
+    }
 };

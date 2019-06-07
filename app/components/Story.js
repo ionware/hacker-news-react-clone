@@ -28,43 +28,19 @@ export default function Story({ title, by, time, url, kids}) {
                         </a>
                     </h4>
                     <div className="d-inline">
-                <span className="story-info">
-                    by
-                    <StoryLink to="/">{ by }</StoryLink>
-                    on
-                    { <DateTime timestamp={time}/> }
-                    with
-                    <StoryLink to="/">{ kids.length }</StoryLink>
-                    comments
-                </span>
+                        <span className="story-info">
+                            by
+                            <StoryLink to="/">{ by }</StoryLink>
+                            on
+                            { <DateTime timestamp={time}/> }
+                            with
+                            <StoryLink to="/">{ kids.length }</StoryLink>
+                            comments
+                        </span>
                     </div>
                 </div>
             }
         </ThemeConsumer>
-    );
-    return (
-        <div className="story story-light">
-            <ThemeConsumer>
-                {
-                    ({ theme }) => <h4 className={`story-title story-title-${theme}`}>
-                        <a href={url}>
-                            { title }
-                        </a>
-                    </h4>
-                }
-            </ThemeConsumer>
-            <div className="d-inline">
-                <span className="story-info">
-                    by
-                    <StoryLink to="/">{ by }</StoryLink>
-                    on
-                    { <DateTime timestamp={time}/> }
-                    with
-                    <StoryLink to="/">{ kids.length }</StoryLink>
-                    comments
-                </span>
-            </div>
-        </div>
     );
 };
 

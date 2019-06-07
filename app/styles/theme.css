@@ -7,6 +7,10 @@
 .nav-dark {
     color: #e0e0e0;
 }
+.active {
+    color: #e74c3c;
+}
+
 
 /*
 * Background and color styling

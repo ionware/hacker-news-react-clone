@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { ThemeConsumer } from "../context/Theme";
 
 export default function Nav() {
@@ -9,10 +10,21 @@ export default function Nav() {
                     <nav className={`d-flex space-between nav nav-${theme}`}>
                         <ul className='navbar'>
                             <li className='nav-item font-weight-bold'>
-                                <a href="#" className='nav-item-link'>Top</a>
+                                <NavLink
+                                    activeClassName="active"
+                                    to="/"
+                                    exact
+                                    className="nav-item-link">
+                                    Top
+                                </NavLink>
                             </li>
                             <li className='nav-item font-weight-bold'>
-                                <a href="#" className='nav-item-link'>New</a>
+                                <NavLink
+                                    activeClassName="active"
+                                    to="/new"
+                                    className="nav-item-link">
+                                    New
+                                </NavLink>
                             </li>
                         </ul>
                         <span>

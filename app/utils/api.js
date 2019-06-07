@@ -7,6 +7,15 @@ function getTopStoriesId(amount = 30) {
         .then((data) => data.json())
         .then(data => Array.prototype.slice.call(data, 0, amount))
 }
+
+/**
+ * Get the New stories ID (default to 30)
+ */
+function getNewStoriesId(amount = 30) {
+    return fetch(`${baseURL}/newstories.json`)
+        .then((data) => data.json())
+        .then((data) => Array.prototype.slice.call(data, 0, amount))
+}
 /*
  * Get the an Item of a specific ID, since Hacker News treats every thing
  * as an ID.
@@ -29,6 +38,14 @@ function filterDeletedItem(arrayOfItemsPromise) {
 * */
 export function getTopStories() {
     return getTopStoriesId()
+        .then((itemsId) => itemsId.map(id => getItemById(id)))
+        .then((stories) => filterDeletedItem(stories));
+}
+/*
+* Component will call this to get the new stories
+* */
+export function getNewStories() {
+    return getNewStoriesId()
         .then((itemsId) => itemsId.map(id => getItemById(id)))
         .then((stories) => filterDeletedItem(stories));
 }
