@@ -30,6 +30,9 @@ a {
 .d-flex-inline {
     display: inline-flex;
 }
+.d-inline {
+    display: inline-block;
+}
 .space-between {
     justify-content: space-between;
 }
@@ -83,4 +86,25 @@ a {
     justify-content: center;
     align-content: center;
     padding: 50px 20px;
+}
+
+/*
+* Story Styling
+*/
+.story {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+.story-title {
+    margin: 0 0 5px 0;
+}
+.story-link {
+    color: #000;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 0 3px;
+}
+.story-time {
+    display: inline-block;
+    margin: 0 3px;
 }

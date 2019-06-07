@@ -1,0 +1,16 @@
+.story {
+    transition: border .4s ease-out;
+}
+.story:hover {
+    border-left: 3px solid #e74c3c;
+    transition: border .2s linear;
+}
+.story-info {
+    color: #8a929c;
+}
+.story-title-light {
+    color: #e74c3c;
+}
+.story-title-dark {
+    color: #3498db;
+}
