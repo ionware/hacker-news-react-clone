@@ -1,4 +1,86 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
 body {
-    background-color: #343434;
-    color: #f4f4f4;
+    color: #000;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/*
+* Container, Boxes
+*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container-fluid {
+    width: 100%;
+}
+
+/*
+* Display classess
+*/
+.d-flex {
+    display: flex;
+}
+.d-flex-inline {
+    display: inline-flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+
+/*
+* Button styling
+*/
+.theme-switcher {
+    border: none;
+    font-size: 2em;
+    background: transparent;
+}
+
+/*
+* Nav bar and nav styling
+*/
+.nav {
+    margin: 50px 0 20px 0;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    display: inline-block;
+    padding: 0;
+    margin-right: 20px;
+}
+.nav-item-link {
+    font-size: 1.3em;
+}
+
+/*
+* Font sizes, weight and all fonts
+*/
+.font-weight-bold {
+    font-weight: 700;
+}
+
+/*
+* Miscellaneous classes and styles
+*/
+.loader {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 50px 20px;
 }
