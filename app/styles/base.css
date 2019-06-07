@@ -13,6 +13,9 @@ a {
 /*
 * Container, Boxes
 */
+.box {
+    border: 1px solid transparent;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -99,7 +102,6 @@ a {
     margin: 0 0 5px 0;
 }
 .story-link {
-    color: #000;
     text-decoration: underline;
     display: inline-block;
     margin: 0 3px;

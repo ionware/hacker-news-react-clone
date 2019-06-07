@@ -1,5 +1,33 @@
-.story {
+/*
+* Navbar theme
+*/
+.nav-light {
+    color: inherit;
+}
+.nav-dark {
+    color: #e0e0e0;
+}
+
+/*
+* Background and color styling
+*/
+.bg-light {
+    background: #fff;
+}
+.bg-dark {
+    background: #212526;
+}
+
+/*
+* Story component styling
+*/
+.story-light {
     transition: border .4s ease-out;
+    border-left: 3px solid #fff;
+}
+.story-dark {
+    transition: border .4s ease-out;
+    border-left: 3px solid #363a3b;
 }
 .story:hover {
     border-left: 3px solid #e74c3c;
@@ -12,5 +40,11 @@
     color: #e74c3c;
 }
 .story-title-dark {
-    color: #3498db;
+    color: #e0e0e0;
+}
+.story-link-light {
+    color: #000;
+}
+.story-link-dark {
+    color: #e0e0e0;
 }
