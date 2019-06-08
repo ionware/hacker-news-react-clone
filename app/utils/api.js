@@ -1,17 +1,17 @@
 const baseURL = 'https://hacker-news.firebaseio.com/v0';
 /*
-* Get the Top 30 stories ID
+* Get the Top 50 stories ID
 * */
-function getTopStoriesId(amount = 30) {
+function getTopStoriesId(amount = 50) {
     return fetch(`${baseURL}/topstories.json`)
         .then((data) => data.json())
         .then(data => Array.prototype.slice.call(data, 0, amount))
 }
 
 /**
- * Get the New stories ID (default to 30)
+ * Get the New stories ID (default to 50)
  */
-function getNewStoriesId(amount = 30) {
+function getNewStoriesId(amount = 50) {
     return fetch(`${baseURL}/newstories.json`)
         .then((data) => data.json())
         .then((data) => Array.prototype.slice.call(data, 0, amount))
