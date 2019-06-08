@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://raw.githubusercontent.com/ionware/hacker-news-react-clone/master/demo.gif" alt="demo" width="100%/>
+    <img src="https://raw.githubusercontent.com/ionware/hacker-news-react-clone/master/demo.gif" alt="demo" width="100%"/>
 </h1>
 
 ## Hacker News React Clone
