@@ -69,6 +69,10 @@ export function getUser(id) {
         .then((data) => data.json());
 }
 
+/*
+* User component will call this to get all the stories
+* a user has
+* */
 export function getUserPosts(itemsId) {
     return Promise.all(itemsId.map(
         (id) => getItemById(id)

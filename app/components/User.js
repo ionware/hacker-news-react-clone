@@ -5,7 +5,6 @@ import queryString from 'query-string';
 import { getUser } from "../utils/api";
 import { Redirect } from 'react-router-dom';
 import { ThemeConsumer } from "../context/Theme";
-import UserPost from "./UserPost";
 
 const NoPost = () => {
     return (
@@ -14,6 +13,8 @@ const NoPost = () => {
         </div>
     );
 };
+
+const UserPost = React.lazy(() => import('./UserPost'));
 
 export default class User extends React.Component {
     state = {
@@ -67,7 +68,9 @@ export default class User extends React.Component {
                     }
                 </ThemeConsumer>
                 { user.submitted && user.submitted.length
-                    ? <UserPost posts={user.submitted}/>
+                    ? <React.Suspense fallback={<Loading/>}>
+                        <UserPost posts={user.submitted}/>
+                    </React.Suspense>
                     : <NoPost />
                 }
             </div>

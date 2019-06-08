@@ -10,7 +10,7 @@ export default function Story({ id, title, by, time, url, kids}) {
             {
                 ({ theme }) => <div className={`story story-${theme}`}>
                     <h4 className={`story-title story-title-${theme}`}>
-                        <a href={url}>
+                        <a href={url} target="_blank">
                             { title }
                         </a>
                     </h4>

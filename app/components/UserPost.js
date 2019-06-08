@@ -39,3 +39,7 @@ export default class UserPost extends React.Component {
         );
     }
 }
+
+UserPost.propTypes = {
+    posts: PropTypes.array.isRequired,
+};

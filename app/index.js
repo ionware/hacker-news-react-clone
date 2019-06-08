@@ -1,16 +1,17 @@
 import React from 'react';
+import "./styles/base.css";
+import "./styles/theme.css";
 import ReactDOM from 'react-dom';
 import Nav from './components/Nav';
-import Post from './components/Post';
-import User from './components/User';
+import Loading from "./components/Loading";
 import { ThemeProvider } from "./context/Theme";
-import ComponentWithStories from './components/ComponentWithStories';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import "./styles/base.css";
-import "./styles/theme.css"
 
-const TopStories = ComponentWithStories();
-const NewStories = ComponentWithStories('new');
+
+const TopStory = React.lazy(() => import('./components/TopStory'));
+const NewStory = React.lazy(() => import('./components/NewStory'));
+const Post = React.lazy(() => import('./components/Post'));
+const User = React.lazy(() => import('./components/User'));
 
 class App extends React.Component {
     state = {
@@ -27,12 +28,14 @@ class App extends React.Component {
                     <Router>
                         <div className="container">
                             <Nav/>
-                            <Switch>
-                                <Route path="/" exact component={TopStories} />
-                                <Route path="/new" exact component={NewStories} />
-                                <Route path="/post" exact component={Post} />
-                                <Route path="/user" exact component={User} />
-                            </Switch>
+                            <React.Suspense fallback={<Loading />}>
+                                <Switch>
+                                    <Route path="/" exact component={TopStory} />
+                                    <Route path="/new" exact component={NewStory} />
+                                    <Route path="/post" exact component={Post} />
+                                    <Route path="/user" exact component={User} />
+                                </Switch>
+                            </React.Suspense>
                         </div>
                     </Router>
                 </div>
