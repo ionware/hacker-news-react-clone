@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Nav from './components/Nav';
-//import Stories from './components/Stories';
-import ComponentWithStories from './components/ComponentWithStories';
+import Post from './components/Post';
 import { ThemeProvider } from "./context/Theme";
+import ComponentWithStories from './components/ComponentWithStories';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./styles/base.css";
 import "./styles/theme.css"
@@ -29,6 +29,7 @@ class App extends React.Component {
                             <Switch>
                                 <Route path="/" exact component={TopStories} />
                                 <Route path="/new" exact component={NewStories} />
+                                <Route path="/post" exact component={Post} />
                             </Switch>
                         </div>
                     </Router>

@@ -1,23 +1,10 @@
 import React from 'react';
 import DateTime from './DateTime';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import StoryLink from './StoryLink';
 import { ThemeConsumer } from "../context/Theme";
 
-const StoryLink = ({ to, children }) => {
-    return (
-        <ThemeConsumer>
-            {
-                ({ theme }) => <Link
-                    to={to}
-                    className={`story-link story-link-${theme}`}>
-                        { children }
-                </Link>
-            }
-        </ThemeConsumer>
-    );
-};
-export default function Story({ title, by, time, url, kids}) {
+export default function Story({ id, title, by, time, url, kids}) {
     return (
         <ThemeConsumer>
             {
@@ -30,11 +17,11 @@ export default function Story({ title, by, time, url, kids}) {
                     <div className="d-inline">
                         <span className="story-info">
                             by
-                            <StoryLink to="/">{ by }</StoryLink>
+                            <StoryLink to="/user" id={by}>{ by }</StoryLink>
                             on
                             { <DateTime timestamp={time}/> }
                             with
-                            <StoryLink to="/">{ kids.length }</StoryLink>
+                            <StoryLink to="/post" id={id}>{ kids.length }</StoryLink>
                             comments
                         </span>
                     </div>
@@ -45,9 +32,14 @@ export default function Story({ title, by, time, url, kids}) {
 };
 
 Story.propTypes = {
+    id: PropTypes.any.isRequired,
     title: PropTypes.string.isRequired,
     by: PropTypes.string.isRequired,
     time: PropTypes.number.isRequired,
     url: PropTypes.string.isRequired,
-    kids: PropTypes.arrayOf(PropTypes.number).isRequired,
+    kids: PropTypes.arrayOf(PropTypes.number),
+};
+
+Story.defaultProps = {
+    kids: [],
 };

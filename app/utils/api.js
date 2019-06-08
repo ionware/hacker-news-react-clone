@@ -20,7 +20,7 @@ function getNewStoriesId(amount = 50) {
  * Get the an Item of a specific ID, since Hacker News treats every thing
  * as an ID.
  */
-function getItemById(id) {
+export function getItemById(id) {
     return fetch(`${baseURL}/item/${id}.json`)
         .then((data) => data.json())
 }
@@ -48,4 +48,16 @@ export function getNewStories() {
     return getNewStoriesId()
         .then((itemsId) => itemsId.map(id => getItemById(id)))
         .then((stories) => filterDeletedItem(stories));
+}
+
+/*
+* Will be called by Comments component to get all comments
+* for a particular story
+* */
+export function getComments(id) {
+    return getItemById(id)
+        .then((data) =>
+            Promise.all(data.kids.map((commentId) => getItemById(commentId)))
+        )
+        .then((data) => data);
 }

@@ -32,6 +32,7 @@ export default function ComponentWithStories(toFetch = 'top') {
             return (
                 <div>
                     { stories.map((story) => <Story
+                        id={story.id}
                         key={story.id}
                         title={story.title}
                         kids={story.kids ? story.kids : []}
@@ -44,11 +45,3 @@ export default function ComponentWithStories(toFetch = 'top') {
         }
     }
 }
-
-// ComponentWithStories.propTypes = {
-//     toFetch: PropTypes.string,
-// };
-//
-// ComponentWithStories.defaultProps ={
-//     toFetch: 'top',
-// };

@@ -52,3 +52,24 @@
 .story-link-dark {
     color: #e0e0e0;
 }
+
+/*
+* Comment Styling
+*/
+.comment-light {
+    background: #e0e0e0;
+}
+.comment-light p a {
+    color: #3498db;
+}
+.comment-dark p a {
+    color: #fff;
+    text-decoration: underline;
+}
+.comment-dark {
+    background: #2f3334;
+    color: #e0e0e0;
+}
+.no-comment {
+    color: #5b5b5b;
+}
