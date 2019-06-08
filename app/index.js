@@ -12,6 +12,7 @@ const TopStory = React.lazy(() => import('./components/TopStory'));
 const NewStory = React.lazy(() => import('./components/NewStory'));
 const Post = React.lazy(() => import('./components/Post'));
 const User = React.lazy(() => import('./components/User'));
+const NotFound = React.lazy(() => import('./components/Error'));
 
 class App extends React.Component {
     state = {
@@ -34,6 +35,7 @@ class App extends React.Component {
                                     <Route path="/new" exact component={NewStory} />
                                     <Route path="/post" exact component={Post} />
                                     <Route path="/user" exact component={User} />
+                                    <Route component={NotFound} />
                                 </Switch>
                             </React.Suspense>
                         </div>
