@@ -130,3 +130,9 @@ a {
 .no-comment {
     padding: 15px 10px;
 }
+/*
+* User Styles
+*/
+.user-text {
+    margin: 15px 0 4px 0;
+}

@@ -41,5 +41,6 @@ Story.propTypes = {
 };
 
 Story.defaultProps = {
+    url: '#',
     kids: [],
 };

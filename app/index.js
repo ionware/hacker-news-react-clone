@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Nav from './components/Nav';
 import Post from './components/Post';
+import User from './components/User';
 import { ThemeProvider } from "./context/Theme";
 import ComponentWithStories from './components/ComponentWithStories';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -30,6 +31,7 @@ class App extends React.Component {
                                 <Route path="/" exact component={TopStories} />
                                 <Route path="/new" exact component={NewStories} />
                                 <Route path="/post" exact component={Post} />
+                                <Route path="/user" exact component={User} />
                             </Switch>
                         </div>
                     </Router>

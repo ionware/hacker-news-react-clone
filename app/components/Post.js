@@ -1,12 +1,16 @@
 import React from 'react';
+import Story from './Story';
 import Loading from './Loading';
 import queryString from 'query-string';
 import { getItemById } from "../utils/api";
 import { Redirect } from 'react-router-dom';
-import Story from './Story';
 
 const Comments = React.lazy(() => import('./Comments'));
 
+/*
+* Will be shown if the story has no Comment Yet!
+*
+* */
 const NoComment = () => {
     return (
         <div className="justify-center no-comment">
@@ -20,7 +24,6 @@ export default class Post extends React.Component {
         loading: true,
         error: false,
         story: null,
-        comments: null,
     };
     componentDidMount() {
         const { location } = this.props;

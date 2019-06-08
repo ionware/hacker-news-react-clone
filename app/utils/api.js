@@ -61,3 +61,21 @@ export function getComments(id) {
         )
         .then((data) => data);
 }
+/*
+* Will be called by User to get the info of a user with their ID
+* */
+export function getUser(id) {
+    return fetch(`${baseURL}/user/${id}.json`)
+        .then((data) => data.json());
+}
+
+export function getUserPosts(itemsId) {
+    return Promise.all(itemsId.map(
+        (id) => getItemById(id)
+    ))
+        .then((resources) =>
+            resources.filter(
+                (resource) => resource.type === 'story' && !resource.deleted
+            )
+        );
+}

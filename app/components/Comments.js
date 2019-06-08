@@ -30,7 +30,12 @@ export default class Comments extends React.Component {
         return (
             <div className="comments">
                 {
-                    comments.map(({ by, id, time, text }) => <Comment by={by} id={id} time={time} text={text} key={id}/>)
+                    comments.map(({ by, id, time, text }) => <Comment
+                        by={by}
+                        time={time}
+                        text={text}
+                        key={id}
+                    />)
                 }
             </div>
         );

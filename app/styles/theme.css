@@ -73,3 +73,12 @@
 .no-comment {
     color: #5b5b5b;
 }
+/*
+* User styles.
+*/
+.user-text-dark {
+    color: #e0e0e0;
+}
+.user-text-light {
+    color: #0e0e0e;
+}
