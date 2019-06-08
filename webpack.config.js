@@ -20,7 +20,8 @@ module.exports = {
             template: path.join(__dirname, 'app', 'index.html')
         }),
         new CopyWebpackPlugin([
-            { from: './app/icon.png'}
+            { from: './app/icon.png'},
+            { from: '_redirect'}
         ])
     ],
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
