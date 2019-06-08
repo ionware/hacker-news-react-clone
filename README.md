@@ -18,3 +18,19 @@ comment, so that was in check too!
 ### API
 The app make use of [Hacker News API](https://github.com/HackerNews/API), you can visit the link to learn
 more about Hacker News API.
+
+### Installation
+- First thing first, clone this repo
+```npm
+git clone https://github.com/ionware/hacker-news-react-clone
+```
+- Okay, you can change directory into the cloned repository and install Dependencies by running
+```npm
+npm install
+```
+- Now, there are three NPM script commands which have different things they do.
+1. "npm run build" will run a production deployable build for you that you can serve on your server
+2. "npm run build:local" will run a development build for you.
+3. "npm start" will start webpack-dev-server for you with HMR enabled (good if you are playing around with things).
+- Lastly, your Build will be in the **build** folder, you can make that your document root on your server, or specify it
+as Netlify public folder.
